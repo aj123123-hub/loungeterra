@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ЛаунжТерра — Отдых на природе, собранный под ключ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: 'Manrope', -apple-system, sans-serif;
+      color: #21302A;
+      background: #F3ECDC;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    ::selection { background: #A8763F; color: #F3ECDC; }
+    h1, h2, h3 { margin: 0; }
+    p { margin: 0; }
+    a { text-decoration: none; }
+
+    /* ── Hero ── */
+    .hero {
+      position: relative;
+      background: #16271E;
+      color: #EFE7D4;
+      padding: clamp(22px, 5vw, 40px) clamp(20px, 5vw, 72px) clamp(56px, 10vw, 120px);
+      overflow: hidden;
+    }
+    .hero-noise {
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .hero-glow {
+      position: absolute;
+      right: -12%;
+      top: -30%;
+      width: 55vw;
+      height: 55vw;
+      max-width: 620px;
+      max-height: 620px;
+      border-radius: 50%;
+      background: radial-gradient(circle at center, rgba(168,118,63,0.22), rgba(22,39,30,0) 70%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .hero-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+    }
+    .logo-diamond {
+      display: inline-block;
+      width: 13px;
+      height: 13px;
+      border-radius: 3px;
+      background: #A8763F;
+      transform: rotate(45deg);
+      flex-shrink: 0;
+    }
+    .logo-name {
+      font-family: 'Spectral', serif;
+      font-size: clamp(19px, 2.5vw, 23px);
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    .hero-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12.5px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #A9B8A4;
+    }
+    .hero-badge-dot {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #7FA06A;
+      flex-shrink: 0;
+    }
+    .hero-content {
+      margin-top: clamp(44px, 9vw, 96px);
+      max-width: 880px;
+    }
+    .hero-label {
+      font-size: 12.5px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #A8763F;
+      font-weight: 600;
+      margin-bottom: 22px;
+    }
+    .hero-title {
+      font-family: 'Spectral', serif;
+      font-weight: 600;
+      font-size: clamp(2.5rem, 7.2vw, 5rem);
+      line-height: 1.04;
+      letter-spacing: -0.015em;
+      text-wrap: balance;
+    }
+    .hero-desc {
+      margin-top: clamp(22px, 4vw, 32px);
+      font-size: clamp(1.05rem, 2.4vw, 1.4rem);
+      line-height: 1.55;
+      color: #CBD6C2;
+      max-width: 620px;
+      text-wrap: pretty;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px 22px;
+      margin-top: clamp(30px, 5vw, 44px);
+    }
+    .btn-call {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      background: #A8763F;
+      color: #16271E;
+      font-weight: 600;
+      font-size: 1.02rem;
+      padding: 15px 26px;
+      border-radius: 999px;
+      transition: transform .18s ease, background .18s ease;
+      white-space: nowrap;
+    }
+    .btn-call:hover { transform: translateY(-2px); background: #BD8A4F; }
+    .hero-phone {
+      font-size: 1.02rem;
+      color: #CBD6C2;
+      white-space: nowrap;
+    }
+
+    /* ── Section shared ── */
+    .section-number {
+      font-family: 'Spectral', serif;
+      font-size: 14px;
+      color: #A8763F;
+      font-weight: 600;
+    }
+    .section-heading {
+      font-family: 'Spectral', serif;
+      font-weight: 600;
+      font-size: clamp(1.9rem, 4.6vw, 3rem);
+      line-height: 1.08;
+      letter-spacing: -0.01em;
+    }
+    .section-title-row {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: clamp(32px, 6vw, 56px);
+    }
+
+    /* ── 01 Что делаем ── */
+    .what-section {
+      background: #F3ECDC;
+      padding: clamp(56px, 10vw, 112px) clamp(20px, 5vw, 72px);
+    }
+    .what-inner { max-width: 1080px; margin: 0 auto; }
+    .cards-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: clamp(14px, 2vw, 20px);
+    }
+    .card {
+      flex: 1 1 280px;
+      max-width: 340px;
+      background: #FBF6EC;
+      border: 1px solid #E4D9C2;
+      border-radius: 18px;
+      padding: 28px 26px 30px;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px -24px rgba(22,39,30,0.5);
+    }
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: #EFE2CB;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #7A5232;
+      margin-bottom: 20px;
+      flex-shrink: 0;
+    }
+    .card h3 {
+      font-family: 'Spectral', serif;
+      font-weight: 600;
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+    }
+    .card p {
+      font-size: 0.96rem;
+      line-height: 1.5;
+      color: #5C6A5F;
+    }
+    .what-note {
+      margin-top: clamp(22px, 4vw, 30px);
+      font-size: 0.95rem;
+      color: #7A5232;
+    }
+
+    /* ── 02 Для кого ── */
+    .who-section {
+      position: relative;
+      background: #16271E;
+      color: #EFE7D4;
+      padding: clamp(56px, 10vw, 112px) clamp(20px, 5vw, 72px);
+      overflow: hidden;
+    }
+    .who-noise {
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n2'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n2)' opacity='0.045'/%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .who-inner {
+      position: relative;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .who-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: clamp(2px, 1vw, 8px);
+      border-top: 1px solid rgba(168,118,63,0.35);
+    }
+    .who-item {
+      padding: 26px 24px 28px;
+      border-bottom: 1px solid rgba(168,118,63,0.18);
+    }
+    .who-item-title {
+      font-family: 'Spectral', serif;
+      font-size: 1.45rem;
+      font-weight: 600;
+      margin-bottom: 7px;
+    }
+    .who-item p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: #A9B8A4;
+    }
+
+    /* ── 03 Почему мы ── */
+    .why-section {
+      background: #F3ECDC;
+      padding: clamp(56px, 10vw, 112px) clamp(20px, 5vw, 72px);
+    }
+    .why-inner { max-width: 1080px; margin: 0 auto; }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: clamp(16px, 3vw, 28px);
+    }
+    .why-num {
+      font-family: 'Spectral', serif;
+      font-size: clamp(2.4rem, 5vw, 3.2rem);
+      font-weight: 600;
+      color: #A8763F;
+      line-height: 1;
+      margin-bottom: 14px;
+    }
+    .why-item h3 {
+      font-family: 'Spectral', serif;
+      font-weight: 600;
+      font-size: 1.35rem;
+      margin-bottom: 9px;
+    }
+    .why-item p {
+      font-size: 1rem;
+      line-height: 1.55;
+      color: #5C6A5F;
+    }
+
+    /* ── 04 Контакт ── */
+    .contact-section {
+      position: relative;
+      background: #0F1D16;
+      color: #EFE7D4;
+      padding: clamp(56px, 10vw, 120px) clamp(20px, 5vw, 72px);
+      overflow: hidden;
+    }
+    .contact-glow {
+      position: absolute;
+      right: -15%;
+      bottom: -35%;
+      width: 60vw;
+      height: 60vw;
+      max-width: 640px;
+      max-height: 640px;
+      border-radius: 50%;
+      background: radial-gradient(circle at center, rgba(168,118,63,0.18), rgba(15,29,22,0) 70%);
+      pointer-events: none;
+    }
+    .contact-inner {
+      position: relative;
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: clamp(32px, 6vw, 56px);
+    }
+    .contact-copy { max-width: 560px; }
+    .contact-copy .section-number { display: block; }
+    .contact-title {
+      font-family: 'Spectral', serif;
+      font-weight: 600;
+      font-size: clamp(2rem, 5.4vw, 3.4rem);
+      line-height: 1.08;
+      margin: 10px 0 0;
+      letter-spacing: -0.01em;
+      text-wrap: balance;
+    }
+    .contact-desc {
+      margin-top: 22px;
+      font-size: 1.05rem;
+      line-height: 1.55;
+      color: #A9B8A4;
+    }
+    .contact-card {
+      background: rgba(243,236,220,0.05);
+      border: 1px solid rgba(168,118,63,0.3);
+      border-radius: 20px;
+      padding: clamp(26px, 4vw, 34px);
+      min-width: min(100%, 320px);
+    }
+    .contact-label {
+      font-size: 12.5px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #A8763F;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+    .contact-name {
+      font-family: 'Spectral', serif;
+      font-size: 1.7rem;
+      font-weight: 600;
+      line-height: 1.1;
+    }
+    .contact-role {
+      font-size: 0.98rem;
+      color: #A9B8A4;
+      margin-top: 5px;
+    }
+    .btn-contact {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 13px;
+      margin-top: 24px;
+      background: #A8763F;
+      color: #16271E;
+      font-weight: 700;
+      font-size: 1.15rem;
+      padding: 16px 22px;
+      border-radius: 14px;
+      transition: background .18s ease, transform .18s ease;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+    .btn-contact:hover { background: #BD8A4F; transform: translateY(-2px); }
+
+    /* ── Footer ── */
+    .footer-row {
+      position: relative;
+      max-width: 1080px;
+      margin: clamp(48px, 8vw, 80px) auto 0;
+      padding-top: 26px;
+      border-top: 1px solid rgba(168,118,63,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .footer-diamond {
+      display: inline-block;
+      width: 11px;
+      height: 11px;
+      border-radius: 2px;
+      background: #A8763F;
+      transform: rotate(45deg);
+      flex-shrink: 0;
+    }
+    .footer-logo-name {
+      font-family: 'Spectral', serif;
+      font-size: 17px;
+      font-weight: 600;
+    }
+    .footer-copy {
+      font-size: 13px;
+      color: #6E7E6C;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Hero ── -->
+  <section class="hero">
+    <div class="hero-noise"></div>
+    <div class="hero-glow"></div>
+
+    <div class="hero-inner">
+      <nav class="hero-nav">
+        <div class="logo">
+          <span class="logo-diamond"></span>
+          <span class="logo-name">ЛаунжТерра</span>
+        </div>
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Образцы — рядом на стенде
+        </div>
+      </nav>
+
+      <div class="hero-content">
+        <div class="hero-label">Агрегатор решений для отдыха на природе</div>
+        <h1 class="hero-title">Отдых на природе,<br>собранный под ключ</h1>
+        <p class="hero-desc">Один подрядчик на террасную доску, беседки, лофт‑мебель, фудтраки и причальные сооружения. То, что вы трогаете руками на стенде, мы построим у вас.</p>
+
+        <div class="hero-actions">
+          <a href="tel:+79023633836" class="btn-call">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            Позвонить Виктору
+          </a>
+          <div class="hero-phone">+7 902 363 38 36</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 01 Что делаем ── -->
+  <section class="what-section">
+    <div class="what-inner">
+      <div class="section-title-row">
+        <span class="section-number">01</span>
+        <h2 class="section-heading">Что делаем</h2>
+      </div>
+
+      <div class="cards-grid">
+
+        <div class="card">
+          <div class="card-icon">
+            <svg width="26" height="26" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+              <line x1="6" y1="12" x2="34" y2="12"/>
+              <line x1="6" y1="20" x2="34" y2="20"/>
+              <line x1="6" y1="28" x2="34" y2="28"/>
+            </svg>
+          </div>
+          <h3>Террасная доска</h3>
+          <p>ДПК и натуральное дерево. Настилы, подиумы, входные группы.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <svg width="26" height="26" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M8 18 L20 8 L32 18"/>
+              <line x1="11" y1="18" x2="11" y2="32"/>
+              <line x1="29" y1="18" x2="29" y2="32"/>
+              <line x1="7" y1="32" x2="33" y2="32"/>
+            </svg>
+          </div>
+          <h3>Беседки</h3>
+          <p>Перголы, навесы и беседки из дерева и металла под ваш участок.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <svg width="26" height="26" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M8 30 v-6 a4 4 0 0 1 4-4 h16 a4 4 0 0 1 4 4 v6"/>
+              <path d="M11 20 v-2 a3 3 0 0 1 3-3 h12 a3 3 0 0 1 3 3 v2"/>
+              <line x1="8" y1="30" x2="8" y2="33"/>
+              <line x1="32" y1="30" x2="32" y2="33"/>
+            </svg>
+          </div>
+          <h3>Лофт‑мебель</h3>
+          <p>Уличная и интерьерная мебель: дерево, металл, фактура.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <svg width="26" height="26" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="6" y="15" width="18" height="12" rx="1"/>
+              <path d="M24 19 h5 l3 4 v4 h-8 z"/>
+              <circle cx="13" cy="30" r="2.4"/>
+              <circle cx="27" cy="30" r="2.4"/>
+              <line x1="6" y1="30" x2="9.5" y2="30"/>
+            </svg>
+          </div>
+          <h3>Фудтраки</h3>
+          <p>Мобильные кухни и бары под ключ — как образец на стенде.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <svg width="26" height="26" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="6" y1="20" x2="30" y2="20"/>
+              <line x1="11" y1="20" x2="11" y2="28"/>
+              <line x1="20" y1="20" x2="20" y2="28"/>
+              <line x1="29" y1="20" x2="29" y2="28"/>
+              <path d="M6 32 q5 -4 10 0 t10 0 t8 0"/>
+            </svg>
+          </div>
+          <h3>Причальные сооружения</h3>
+          <p>Причалы, пирсы и понтоны для воды — от проекта до монтажа.</p>
+        </div>
+
+      </div>
+
+      <p class="what-note">А также: уличное освещение, кашпо и сопутствующее благоустройство.</p>
+    </div>
+  </section>
+
+  <!-- ── 02 Для кого ── -->
+  <section class="who-section">
+    <div class="who-noise"></div>
+    <div class="who-inner">
+      <div class="section-title-row">
+        <span class="section-number">02</span>
+        <h2 class="section-heading">Для кого</h2>
+      </div>
+
+      <div class="who-grid">
+        <div class="who-item">
+          <div class="who-item-title">Частные дома</div>
+          <p>Террасы, беседки и зоны отдыха для участка и сада.</p>
+        </div>
+        <div class="who-item">
+          <div class="who-item-title">Базы отдыха</div>
+          <p>Комплексное благоустройство территории под ключ.</p>
+        </div>
+        <div class="who-item">
+          <div class="who-item-title">Рестораны</div>
+          <p>Летние веранды, фудтраки и уличная мебель.</p>
+        </div>
+        <div class="who-item">
+          <div class="who-item-title">Яхт‑клубы</div>
+          <p>Причалы, пирсы и прибрежные зоны отдыха.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 03 Почему мы ── -->
+  <section class="why-section">
+    <div class="why-inner">
+      <div class="section-title-row">
+        <span class="section-number">03</span>
+        <h2 class="section-heading">Почему мы</h2>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-item">
+          <div class="why-num">01</div>
+          <h3>Один подрядчик на всё</h3>
+          <p>Не нужно собирать пять разных бригад. Терраса, мебель, беседка и причал — из одних рук.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-num">02</div>
+          <h3>Натуральные материалы</h3>
+          <p>Дерево, металл, камень. Никакого дешёвого пластика — только честная фактура.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-num">03</div>
+          <h3>От проекта до монтажа</h3>
+          <p>Замер, проект, изготовление и установка. Вы видите результат, а не процесс.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 04 Контакт ── -->
+  <section class="contact-section">
+    <div class="contact-glow"></div>
+
+    <div class="contact-inner">
+      <div class="contact-copy">
+        <span class="section-number">04</span>
+        <h2 class="contact-title">Образцы вы уже увидели.<br>Остальное обсудим лично.</h2>
+        <p class="contact-desc">Расскажите про объект — предложу решение и смету.</p>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-label">Контакт</div>
+        <div class="contact-name">Виктор</div>
+        <div class="contact-role">основатель проекта</div>
+        <a href="tel:+79023633836" class="btn-contact">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          +7 902 363 38 36
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-row">
+      <div class="footer-logo">
+        <span class="footer-diamond"></span>
+        <span class="footer-logo-name">ЛаунжТерра</span>
+      </div>
+      <div class="footer-copy">Решения для отдыха на природе · 2026</div>
+    </div>
+  </section>
+
+</body>
+</html>
