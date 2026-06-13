@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { background: #16271E; }
+  html { scroll-behavior: smooth; }
+  ::selection { background: #A8763F; color: #F3ECDC; }
+</style>
+</helmet>
+
+<div style="margin:0; font-family:'Manrope',-apple-system,sans-serif; color:#21302A; background:#F3ECDC; -webkit-font-smoothing:antialiased; overflow-x:hidden;">
+
+  <!-- ============ 1. HERO ============ -->
+  <section style="position:relative; min-height:100svh; display:flex; flex-direction:column; color:#EFE7D4; padding:clamp(22px,5vw,40px) clamp(20px,5vw,72px) clamp(40px,7vw,72px); overflow:hidden; background-image:linear-gradient(180deg, rgba(15,25,19,0.55) 0%, rgba(15,25,19,0.42) 45%, rgba(15,25,19,0.78) 100%), url(&quot;assets/hero-foodtruck.jpeg&quot;); background-size:cover; background-position:center 38%;">
+
+    <!-- top bar -->
+    <div style="position:relative; max-width:1120px; margin:0 auto; width:100%; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+      <div style="display:flex; align-items:center; gap:11px;">
+        <span style="display:inline-block; width:13px; height:13px; border-radius:3px; background:#A8763F; transform:rotate(45deg);"></span>
+        <span style="font-family:'Spectral',serif; font-size:clamp(19px,2.5vw,23px); font-weight:600; letter-spacing:0.04em;">LOUNGE&nbsp;TERRA</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:8px; font-size:12.5px; letter-spacing:0.06em; text-transform:uppercase; color:#D6CDBB;">
+        <span style="display:inline-block; width:7px; height:7px; border-radius:50%; background:#9DBE7E;"></span>
+        Образцы — рядом на стенде
+      </div>
+    </div>
+
+    <!-- headline -->
+    <div style="position:relative; max-width:1120px; margin:auto auto 0; width:100%; padding-top:clamp(40px,8vw,72px);">
+      <div style="max-width:860px;">
+        <div style="font-size:12.5px; letter-spacing:0.22em; text-transform:uppercase; color:#E0B179; font-weight:600; margin-bottom:22px;">Пространства отдыха под ключ</div>
+        <h1 style="font-family:'Spectral',serif; font-weight:600; font-size:clamp(2.3rem,6.2vw,4.6rem); line-height:1.05; letter-spacing:-0.015em; margin:0; text-wrap:balance; text-shadow:0 2px 30px rgba(10,18,13,0.5);">Зоны отдыха под ключ — от проекта до сборки на месте</h1>
+        <p style="margin:clamp(20px,3.5vw,28px) 0 0; font-size:clamp(1.05rem,2.3vw,1.35rem); line-height:1.55; color:#E4DCCB; max-width:640px; text-wrap:pretty;">Рассчитаем, укомплектуем и подготовим инструкции для сборки вашей террасы, зоны у бассейна, кафе или причала.</p>
+
+        <!-- 3 тезиса -->
+        <div style="display:flex; flex-wrap:wrap; gap:10px 14px; margin-top:clamp(24px,4vw,34px);">
+          <div style="display:flex; align-items:center; gap:9px; background:rgba(243,236,220,0.1); border:1px solid rgba(224,177,121,0.32); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); border-radius:999px; padding:9px 16px 9px 13px; font-size:0.92rem; color:#F1E9D8;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#E0B179" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Единый проект вместо хаотичных закупок
+          </div>
+          <div style="display:flex; align-items:center; gap:9px; background:rgba(243,236,220,0.1); border:1px solid rgba(224,177,121,0.32); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); border-radius:999px; padding:9px 16px 9px 13px; font-size:0.92rem; color:#F1E9D8;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#E0B179" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Материалы, мебель, покрытия и декор в одной комплектации
+          </div>
+          <div style="display:flex; align-items:center; gap:9px; background:rgba(243,236,220,0.1); border:1px solid rgba(224,177,121,0.32); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); border-radius:999px; padding:9px 16px 9px 13px; font-size:0.92rem; color:#F1E9D8;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#E0B179" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Сборка на месте обычными рабочими
+          </div>
+        </div>
+
+        <a href="#contact" style="display:inline-flex; align-items:center; gap:11px; margin-top:clamp(28px,4.5vw,38px); background:#A8763F; color:#16271E; text-decoration:none; font-weight:600; font-size:1.05rem; padding:16px 28px; border-radius:999px; transition:transform .18s ease, background .18s ease; box-shadow:0 14px 34px -16px rgba(0,0,0,0.6);" style-hover="transform:translateY(-2px); background:#BD8A4F;">
+          Рассчитать зону отдыха
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2. КАК МЫ РАБОТАЕМ ============ -->
+  <section style="background:#F3ECDC; padding:clamp(56px,10vw,108px) clamp(20px,5vw,72px);">
+    <div style="max-width:1120px; margin:0 auto;">
+      <div style="display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin-bottom:clamp(36px,6vw,60px);">
+        <span style="font-family:'Spectral',serif; font-size:14px; color:#A8763F; font-weight:600;">01</span>
+        <h2 style="font-family:'Spectral',serif; font-weight:600; font-size:clamp(1.9rem,4.6vw,3rem); line-height:1.08; margin:0; letter-spacing:-0.01em;">От идеи до готового комплекта</h2>
+      </div>
+
+      <div style="display:flex; flex-wrap:wrap; align-items:stretch; justify-content:center; gap:clamp(8px,1.4vw,14px);">
+
+        <div style="flex:1 1 150px; max-width:200px; background:#FBF6EC; border:1px solid #E4D9C2; border-radius:16px; padding:24px 18px; text-align:center;">
+          <div style="width:46px; height:46px; margin:0 auto 16px; border-radius:12px; background:#EFE2CB; display:flex; align-items:center; justify-content:center; color:#7A5232;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1h6c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2z"></path></svg>
+          </div>
+          <div style="font-family:'Spectral',serif; font-weight:600; font-size:1.08rem; margin-bottom:5px;">Идея</div>
+          <p style="margin:0; font-size:0.82rem; line-height:1.45; color:#5C6A5F;">Задача, площадка, бюджет</p>
+        </div>
+
+        <div style="display:flex; align-items:center; color:#C7A776; flex:0 0 auto;">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="transform:rotate(0deg);"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </div>
+
+        <div style="flex:1 1 150px; max-width:200px; background:#FBF6EC; border:1px solid #E4D9C2; border-radius:16px; padding:24px 18px; text-align:center;">
+          <div style="width:46px; height:46px; margin:0 auto 16px; border-radius:12px; background:#EFE2CB; display:flex; align-items:center; justify-content:center; color:#7A5232;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="8" y1="6" x2="16" y2="6"></line><line x1="8" y1="10" x2="16" y2="10"></line><line x1="8" y1="14" x2="12" y2="14"></line></svg>
+          </div>
+          <div style="font-family:'Spectral',serif; font-weight:600; font-size:1.08rem; margin-bottom:5px;">Расчёт</div>
+          <p style="margin:0; font-size:0.82rem; line-height:1.45; color:#5C6A5F;">Смета и объёмы материалов</p>
+        </div>
+
+        <div style="display:flex; align-items:center; color:#C7A776; flex:0 0 auto;">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </div>
+
+        <div style="flex:1 1 150px; max-width:200px; background:#FBF6EC; border:1px solid #E4D9C2; border-radius:16px; padding:24px 18px; text-align:center;">
+          <div style="width:46px; height:46px; margin:0 auto 16px; border-radius:12px; background:#EFE2CB; display:flex; align-items:center; justify-content:center; color:#7A5232;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4z"></path><path d="M3 7v10l9 4 9-4V7"></path><line x1="12" y1="11" x2="12" y2="21"></line></svg>
+          </div>
+          <div style="font-family:'Spectral',serif; font-weight:600; font-size:1.08rem; margin-bottom:5px;">Комплектация</div>
+          <p style="margin:0; font-size:0.82rem; line-height:1.45; color:#5C6A5F;">Всё в одной поставке</p>
+        </div>
+
+        <div style="display:flex; align-items:center; color:#C7A776; flex:0 0 auto;">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </div>
+
+        <div style="flex:1 1 150px; max-width:200px; background:#FBF6EC; border:1px solid #E4D9C2; border-radius:16px; padding:24px 18px; text-align:center;">
+          <div style="width:46px; height:46px; margin:0 auto 16px; border-radius:12px; background:#EFE2CB; display:flex; align-items:center; justify-content:center; color:#7A5232;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="8" y1="13" x2="16" y2="13"></line><line x1="8" y1="17" x2="16" y2="17"></line></svg>
+          </div>
+          <div style="font-family:'Spectral',serif; font-weight:600; font-size:1.08rem; margin-bottom:5px;">Инструкции</div>
+          <p style="margin:0; font-size:0.82rem; line-height:1.45; color:#5C6A5F;">Понятные схемы сборки</p>
+        </div>
+
+        <div style="display:flex; align-items:center; color:#C7A776; flex:0 0 auto;">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </div>
+
+        <div style="flex:1 1 150px; max-width:200px; background:#16271E; border:1px solid #16271E; border-radius:16px; padding:24px 18px; text-align:center; color:#EFE7D4;">
+          <div style="width:46px; height:46px; margin:0 auto 16px; border-radius:12px; background:rgba(224,177,121,0.18); display:flex; align-items:center; justify-content:center; color:#E0B179;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.66 5.66l1.06 1.06"></path><path d="M9.3 17.7a4 4 0 0 0 5.66-5.66"></path><line x1="9" y1="15" x2="15" y2="9"></line><path d="M18 2l1.5 3L23 6l-3 1.5L18 11l-1.5-3.5L13 6l3.5-1.5z" opacity="0"></path></svg>
+          </div>
+          <div style="font-family:'Spectral',serif; font-weight:600; font-size:1.08rem; margin-bottom:5px;">Сборка на месте</div>
+          <p style="margin:0; font-size:0.82rem; line-height:1.45; color:#A9B8A4;">Обычными рабочими</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3. ИЗ ЧЕГО СОСТОИТ ЗОНА ОТДЫХА ============ -->
+  <section style="position:relative; background:#16271E; color:#EFE7D4; padding:clamp(56px,10vw,108px) clamp(20px,5vw,72px); overflow:hidden;">
+    <div style="position:absolute; inset:0; background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n2'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n2)' opacity='0.045'/%3E%3C/svg%3E&quot;); pointer-events:none;"></div>
+    <div style="position:relative; max-width:1120px; margin:0 auto;">
+      <div style="display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin-bottom:clamp(36px,6vw,60px);">
+        <span style="font-family:'Spectral',serif; font-size:14px; color:#E0B179; font-weight:600;">02</span>
+        <h2 style="font-family:'Spectral',serif; font-weight:600; font-size:clamp(1.9rem,4.6vw,3rem); line-height:1.08; margin:0; letter-spacing:-0.01em;">Собираем пространство из нескольких слоёв</h2>
+      </div>
+
+      <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:clamp(12px,1.8vw,18px);">
+
+        <div style="flex:1 1 280px; max-width:340px; background:rgba(243,236,220,0.04); border:1px solid rgba(224,177,121,0.22); border-radius:18px; padding:26px 24px;">
+          <div style="display:flex; align-items:center; gap:14px; margin-bottom:14px;">
+            <div style="width:48px; height:48px; border-radius:12px; background:rgba(224,177,121,0.14); display:flex; align-items:center; justify-content:center; color:#E0B179; flex-shrink:0;">
+              <svg width="25" height="25" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><line x1="6" y1="13" x2="34" y2="13"></line><line x1="6" y1="20" x2="34" y2="20"></line><line x1="6" y1="27" x2="34" y2="27"></line></svg>
+            </div>
+            <div>
+              <div style="font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#E0B179; margin-bottom:3px;">Слой 01</div>
+              <h3 style="font-family:'Spectral',serif; font-weight:600; font-size:1.25rem; margin:0;">Основа</h3>
+            </div>
+          </div>
+          <p style="margin:0; font-size:0.95rem; line-height:1.5; color:#A9B8A4;">Террасы, настилы, крепёж — несущая база всего пространства.</p>
+        </div>
+
+        <div style="flex:1 1 280px; max-width:340px; background:rgba(243,236,220,0.04); border:1px solid rgba(224,177,121,0.22); border-radius:18px; padding:26px 24px;">
+          <div style="display:flex; align-items:center; gap:14px; margin-bottom:14px;">
+            <div style="width:48px; height:48px; border-radius:12px; background:rgba(224,177,121,0.14); display:flex; align-items:center; justify-content:center; color:#E0B179; flex-shrink:0;">
+              <svg width="25" height="25" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 30 v-6 a4 4 0 0 1 4-4 h16 a4 4 0 0 1 4 4 v6"></path><path d="M11 20 v-2 a3 3 0 0 1 3-3 h12 a3 3 0 0 1 3 3 v2"></path><line x1="8" y1="30" x2="8" y2="33"></line><line x1="32" y1="30" x2="32" y2="33"></line></svg>
+            </div>
+            <div>
+              <div style="font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#E0B179; margin-bottom:3px;">Слой 02</div>
+              <h3 style="font-family:'Spectral',serif; font-weight:600; font-size:1.25rem; margin:0;">Мебель</h3>
+            </div>
+          </div>
+          <p style="margin:0; font-size:0.95rem; line-height:1.5; color:#A9B8A4;">Уличная и лофт-мебель: дерево, металл, честная фактура.</p>
+        </div>
+
+        <div style="flex:1 1 280px; max-width:340px; background:rgba(243,236,220,0.04); border:1px solid rgba(224,177,121,0.22); border-radius:18px; padding:26px 24px;">
+          <div style="display:flex; align-items:center; gap:14px; margin-bottom:14px;">
+            <div style="width:48px; height:48px; border-radius:12px; background:rgba(224,177,121,0.14); display:flex; align-items:center; justify-content:center; color:#E0B179; flex-shrink:0;">
+              <svg width="25" height="25" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 34 V14 a8 8 0 0 1 16 0 v20"></path><path d="M12 22 q8 -4 16 0"></path><path d="M12 28 q8 -4 16 0"></path></svg>
+            </div>
+            <div>
+              <div style="font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#E0B179; margin-bottom:3px;">Слой 03</div>
+              <h3 style="font-family:'Spectral',serif; font-weight:600; font-size:1.25rem; margin:0;">Приватность</h3>
+            </div>
+          </div>
+          <p style="margin:0; font-size:0.95rem; line-height:1.5; color:#A9B8A4;">Зелёные ограждения и зонирование пространства.</p>
+        </div>
+
+        <div style="flex:1 1 280px; max-width:340px; background:rgba(243,236,220,0.04); border:1px solid rgba(224,177,121,0.22); border-radius:18px; padding:26px 24px;">
+          <div style="display:flex; align-items:center; gap:14px; margin-bottom:14px;">
+            <div style="width:48px; height:48px; border-radius:12px; background:rgba(224,177,121,0.14); display:flex; align-items:center; justify-content:center; color:#E0B179; flex-shrink:0;">
+              <svg width="25" height="25" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 5 L32 10 V19 c0 8 -5 13 -12 16 c-7 -3 -12 -8 -12 -16 V10 z"></path><polyline points="14 19 18 23 26 14"></polyline></svg>
+            </div>
+            <div>
+              <div style="font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#E0B179; margin-bottom:3px;">Слой 04</div>
+              <h3 style="font-family:'Spectral',serif; font-weight:600; font-size:1.25rem; margin:0;">Защита</h3>
+            </div>
+          </div>
+          <p style="margin:0; font-size:0.95rem; line-height:1.5; color:#A9B8A4;">Масла, грунты и покрытия — долговечность на годы.</p>
+        </div>
+
+        <div style="flex:1 1 280px; max-width:340px; background:rgba(243,236,220,0.04); border:1px solid rgba(224,177,121,0.22); border-radius:18px; padding:26px 24px;">
+          <div style="display:flex; align-items:center; gap:14px; margin-bottom:14px;">
+            <div style="width:48px; height:48px; border-radius:12px; background:rgba(224,177,121,0.14); display:flex; align-items:center; justify-content:center; color:#E0B179; flex-shrink:0;">
+              <svg width="25" height="25" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 l3.6 7.3 8.1 1.2 -5.9 5.7 1.4 8 -7.2 -3.8 -7.2 3.8 1.4 -8 -5.9 -5.7 8.1 -1.2 z"></path></svg>
+            </div>
+            <div>
+              <div style="font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#E0B179; margin-bottom:3px;">Слой 05</div>
+              <h3 style="font-family:'Spectral',serif; font-weight:600; font-size:1.25rem; margin:0;">Атмосфера</h3>
+            </div>
+          </div>
+          <p style="margin:0; font-size:0.95rem; line-height:1.5; color:#A9B8A4;">Декор, текстиль и растения — то, что делает место живым.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4. ЛИНЕЙКА МАТЕРИАЛОВ ============ -->
+  <section style="background:#F3ECDC; padding:clamp(56px,10vw,108px) clamp(20px,5vw,72px);">
+    <div style="max-width:1120px; margin:0 auto;">
+      <div style="display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin-bottom:8px;">
+        <span style="font-family:'Spectral',serif; font-size:14px; color:#A8763F; font-weight:600;">03</span>
+        <h2 style="font-family:'Spectral',serif; font-weight:600; font-size:clamp(1.9rem,4.6vw,3rem); line-height:1.08; margin:0; letter-spacing:-0.01em;">Lounge Terra Materials — собственная линейка</h2>
+      </div>
+      <p style="margin:0 0 clamp(36px,6vw,52px); font-size:clamp(1rem,2.1vw,1.18rem); line-height:1.5; color:#5C6A5F; max-width:620px;">Защитно-декоративные материалы для террас, мебели, фасадов и outdoor-конструкций.</p>
+
+      <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:clamp(12px,1.8vw,18px);">
+
+        <div style="flex:1 1 200px; max-width:248px; background:#16271E; color:#EFE7D4; border-radius:18px; padding:26px 22px; transition:transform .2s ease, box-shadow .2s ease;" style-hover="transform:translateY(-4px); box-shadow:0 20px 44px -22px rgba(22,39,30,0.6);">
+          <div style="display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:48px;">
+            <div style="width:40px; height:52px; border-radius:5px; background:linear-gradient(180deg,#C68A4E,#8A5C2E); position:relative;"><span style="position:absolute; top:-7px; left:50%; transform:translateX(-50%); width:14px; height:9px; background:#3A2A19; border-radius:2px;"></span></div>
+            <span style="font-size:11px; letter-spacing:0.1em; color:#E0B179; font-weight:600;">01</span>
+          </div>
+          <div style="font-family:'Spectral',serif; font-weight:600; font-size:1.15rem; letter-spacing:0.02em;">TERRA DECK</div>
+          <div style="height:2px; width:28px; background:#A8763F; margin:10px 0 12px;"></div>
+          <p style="margin:0; font-size:0.9rem; line-height:1.45; color:#A9B8A4;">Масло для террас</p>
+        </div>
+
+        <div style="flex:1 1 200px; max-width:248px; background:#16271E; color:#EFE7D4; border-radius:18px; padding:26px 22px; transition:transform .2s ease, box-shadow .2s ease;" style-hover="transform:translateY(-4px); box-shadow:0 20px 44px -22px rgba(22,39,30,0.6);">
+          <div style="display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:48px;">
+            <div style="width:40px; height:52px; border-radius:5px; background:linear-gradient(180deg,#B8835A,#7E5734); position:relative;"><span style="position:absolute; top:-7px; left:50%; transform:translateX(-50%); width:14px; height:9px; background:#3A2A19; border-radius:2px;"></span></div>
+            <span style="font-size:11px; letter-spacing:0.1em; color:#E0B179; font-weight:600;">02</span>
+          </div>
+          <div style="font-family:'Spectral',serif; font-weight:600; font-size:1.15rem; letter-spacing:0.02em;">TERRA FURNITURE</div>
+          <div style="height:2px; width:28px; background:#A8763F; margin:10px 0 12px;"></div>
+          <p style="margin:0; font-size:0.9rem; line-height:1.45; color:#A9B8A4;">Масло для уличной мебели</p>
+        </div>
+
+        <div style="flex:1 1 200px; max-width:248px; background:#16271E; color:#EFE7D4; border-radius:18px; padding:26px 22px; transition:transform .2s ease, box-shadow .2s ease;" style-hover="transform:translateY(-4px); box-shadow:0 20px 44px -22px rgba(22,39,30,0.6);">
+          <div style="display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:48px;">
+            <div style="width:40px; height:52px; border-radius:5px; background:linear-gradient(180deg,#9C7448,#6B4A2A); position:relative;"><span style="position:absolute; top:-7px; left:50%; transform:translateX(-50%); width:14px; height:9px; background:#3A2A19; border-radius:2px;"></span></div>
+            <span style="font-size:11px; letter-spacing:0.1em; color:#E0B179; font-weight:600;">03</span>
+          </div>
+          <div style="font-family:'Spectral',serif; font-weight:600; font-size:1.15rem; letter-spacing:0.02em;">TERRA FASADE</div>
+          <div style="height:2px; width:28px; background:#A8763F; margin:10px 0 12px;"></div>
+          <p style="margin:0; font-size:0.9rem; line-height:1.45; color:#A9B8A4;">Масло для фасадов</p>
+        </div>
+
+        <div style="flex:1 1 200px; max-width:248px; background:#16271E; color:#EFE7D4; border-radius:18px; padding:26px 22px; transition:transform .2s ease, box-shadow .2s ease;" style-hover="transform:translateY(-4px); box-shadow:0 20px 44px -22px rgba(22,39,30,0.6);">
+          <div style="display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:48px;">
+            <div style="width:40px; height:52px; border-radius:5px; background:linear-gradient(180deg,#7E8A6E,#4F5A40); position:relative;"><span style="position:absolute; top:-7px; left:50%; transform:translateX(-50%); width:14px; height:9px; background:#2A301E; border-radius:2px;"></span></div>
+            <span style="font-size:11px; letter-spacing:0.1em; color:#E0B179; font-weight:600;">04</span>
+          </div>
+          <div style="font-family:'Spectral',serif; font-weight:600; font-size:1.15rem; letter-spacing:0.02em;">TERRA BASE</div>
+          <div style="height:2px; width:28px; background:#A8763F; margin:10px 0 12px;"></div>
+          <p style="margin:0; font-size:0.9rem; line-height:1.45; color:#A9B8A4;">Грунт для дерева</p>
+        </div>
+
+        <div style="flex:1 1 200px; max-width:248px; background:#16271E; color:#EFE7D4; border-radius:18px; padding:26px 22px; transition:transform .2s ease, box-shadow .2s ease;" style-hover="transform:translateY(-4px); box-shadow:0 20px 44px -22px rgba(22,39,30,0.6);">
+          <div style="display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:48px;">
+            <div style="width:40px; height:52px; border-radius:5px; background:linear-gradient(180deg,#D6CDBB,#A39A86); position:relative;"><span style="position:absolute; top:-7px; left:50%; transform:translateX(-50%); width:14px; height:9px; background:#3A2A19; border-radius:2px;"></span></div>
+            <span style="font-size:11px; letter-spacing:0.1em; color:#E0B179; font-weight:600;">05</span>
+          </div>
+          <div style="font-family:'Spectral',serif; font-weight:600; font-size:1.15rem; letter-spacing:0.02em;">TERRA CARE</div>
+          <div style="height:2px; width:28px; background:#A8763F; margin:10px 0 12px;"></div>
+          <p style="margin:0; font-size:0.9rem; line-height:1.45; color:#A9B8A4;">Уход и очистка</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5. КОНТАКТ ============ -->
+  <section id="contact" style="position:relative; background:#0F1D16; color:#EFE7D4; padding:clamp(56px,10vw,120px) clamp(20px,5vw,72px); overflow:hidden; scroll-margin-top:0;">
+    <div style="position:absolute; right:-15%; bottom:-35%; width:60vw; height:60vw; max-width:640px; max-height:640px; border-radius:50%; background:radial-gradient(circle at center, rgba(168,118,63,0.18), rgba(15,29,22,0) 70%); pointer-events:none;"></div>
+    <div style="position:relative; max-width:1120px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:clamp(32px,6vw,56px);">
+      <div style="max-width:560px;">
+        <span style="font-family:'Spectral',serif; font-size:14px; color:#E0B179; font-weight:600;">04</span>
+        <h2 style="font-family:'Spectral',serif; font-weight:600; font-size:clamp(2rem,5.4vw,3.4rem); line-height:1.08; margin:10px 0 0; letter-spacing:-0.01em; text-wrap:balance;">Есть вопросы или нужна консультация?</h2>
+        <p style="margin:22px 0 0; font-size:1.05rem; line-height:1.55; color:#A9B8A4;">Опишите объект — рассчитаем материалы и подготовим комплектацию для сборки на месте.</p>
+      </div>
+
+      <div style="background:rgba(243,236,220,0.05); border:1px solid rgba(168,118,63,0.3); border-radius:20px; padding:clamp(26px,4vw,34px); min-width:min(100%,330px);">
+        <div style="font-size:12.5px; letter-spacing:0.16em; text-transform:uppercase; color:#E0B179; font-weight:600; margin-bottom:14px;">Контакт</div>
+        <div style="font-family:'Spectral',serif; font-size:1.7rem; font-weight:600; line-height:1.1;">{{ name }}</div>
+        <div style="font-size:0.98rem; color:#A9B8A4; margin-top:5px;">{{ role }}</div>
+        <a href="{{ tel }}" style="display:flex; align-items:center; justify-content:center; gap:12px; margin-top:24px; background:#A8763F; color:#16271E; text-decoration:none; font-weight:700; font-size:1.15rem; padding:15px 22px; border-radius:14px; transition:background .18s ease, transform .18s ease; letter-spacing:0.01em; white-space:nowrap;" style-hover="background:#BD8A4F; transform:translateY(-2px);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          {{ phone }}
+        </a>
+        <a href="{{ mailto }}" style="display:flex; align-items:center; justify-content:center; gap:11px; margin-top:11px; background:transparent; color:#EFE7D4; text-decoration:none; font-weight:600; font-size:1rem; padding:14px 22px; border-radius:14px; border:1px solid rgba(224,177,121,0.4); transition:background .18s ease; white-space:nowrap;" style-hover="background:rgba(224,177,121,0.12);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E0B179" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 6L2 7"></path></svg>
+          {{ email }}
+        </a>
+      </div>
+    </div>
+
+    <div style="position:relative; max-width:1120px; margin:clamp(48px,8vw,80px) auto 0; padding-top:26px; border-top:1px solid rgba(168,118,63,0.2); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <span style="display:inline-block; width:11px; height:11px; border-radius:2px; background:#A8763F; transform:rotate(45deg);"></span>
+        <span style="font-family:'Spectral',serif; font-size:17px; font-weight:600; letter-spacing:0.04em;">LOUNGE TERRA</span>
+      </div>
+      <div style="font-size:13px; color:#6E7E6C;">Пространства отдыха под ключ · {{ year }}</div>
+    </div>
+  </section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;phone&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;+7 902 363 38 36&quot;, &quot;tsType&quot;: &quot;string&quot; },
+  &quot;email&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Viktor@volga34.ru&quot;, &quot;tsType&quot;: &quot;string&quot; },
+  &quot;contactName&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Виктор&quot;, &quot;tsType&quot;: &quot;string&quot; },
+  &quot;contactRole&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Основатель проекта&quot;, &quot;tsType&quot;: &quot;string&quot; }
+}">
+class Component extends DCLogic {
+  renderVals() {
+    const phone = this.props.phone ?? '+7 902 363 38 36';
+    const email = this.props.email ?? 'Viktor@volga34.ru';
+    return {
+      phone,
+      tel: 'tel:' + phone.replace(/[^\d+]/g, ''),
+      email,
+      mailto: 'mailto:' + email,
+      name: this.props.contactName ?? 'Виктор',
+      role: this.props.contactRole ?? 'Основатель проекта',
+      year: new Date().getFullYear(),
+    };
+  }
+}
+</script>
+</body>
+</html>
